@@ -1,13 +1,56 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #0e1320;
+}
+
+.custom__tooltip-marker {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  margin-right: 10px;
+  position: relative;
+}
+
+.custom__tooltip-marker::before {
+  content: "";
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.progress.custom__tooltip-marker::before {
+  background: #00c45c;
+}
+
+.regress.custom__tooltip-marker::before {
+  background: #b70000;
+}
+
+.custom_tooltip {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: rgb(17, 25, 39);
+  outline: none;
+  color: white;
+}
+
+.custom__tooltip-block {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
